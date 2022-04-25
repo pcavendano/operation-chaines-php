@@ -3,7 +3,13 @@
 
 <?php
 
+
+include ('exercice-2-php-2.php');
 include ('exercice-2-php.php');
+
+
+
+
 function afficherPiedDePage($societe, $annee) {
 	$societe = "Pedro Contreras Avendano";
 	$annee = "2022";

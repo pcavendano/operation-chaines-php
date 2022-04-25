@@ -116,33 +116,14 @@ function password_verification($unverified_password){
 };
 
 
-$password_1 = " 0&a24223A2 ";
-$password_2 = "0 &a22223A2";
-$password_3 = "0(&a24223A2";
-$password_4 = "0ê&a22223A2";
-$password_5 = "0e&a22222A2";
-$password_6 = "2e&a22222A2";
-$password_7 = "0&a22223A";
-
 //Execution du programme
 
+$passwords_to_test= [" 0&a24223A2 ","0 &a22223A2", "0(&a24223A2", "0ê&a22223A2", "0e&a22222A2", "2e&a22222A2", "0&a22223A"];
 echo '<div>'."Exercice 2 ".'</div>' ;
-$letreuni =ord("Z");
-echo '<div>'.$letreuni.'</div>' ;
 echo "<p>";
-echo 'Chaîne du mot de passe contrôlée : '.$password_1 .' -> valide </p>';
-echo '<div class = "password">'.'Validation ave la fonction password_verification -> '.password_verification($password_1)."<br>"."<br>"."</div>";
-echo 'Chaîne du mot de passe contrôlée : '.$password_2 .' -> non valide </p>';
-echo '<div class = "password">'.'Validation ave la fonction password_verification ->'.password_verification($password_2)."<br>"."<br>"."</div>";
-echo 'Chaîne du mot de passe contrôlée : '.$password_3 .' -> non valide </p>';
-echo '<div class = "password">'.'Validation ave la fonction password_verification -> '.password_verification($password_3)."<br>"."<br>"."</div>";
-echo 'Chaîne du mot de passe contrôlée : '.$password_4 .' -> non valide </p>';
-echo '<div class = "password">'.'Validation ave la fonction password_verification -> '.password_verification($password_4)."<br>"."<br>"."</div>";
-echo 'Chaîne du mot de passe contrôlée : '.$password_5 .' -> valide </p>';
-echo '<div class = "password">'.'Validation ave la fonction password_verification -> '.password_verification($password_5)."<br>"."<br>"."</div>";
-echo 'Chaîne du mot de passe contrôlée : '.$password_6 .' -> non valide </p>';
-echo '<div class = "password">'.'Validation ave la fonction password_verification -> '.password_verification($password_6)."<br>"."<br>"."</div>";
-echo 'Chaîne du mot de passe contrôlée : '.$password_7 .' -> non valide </p>';
-echo '<div class = "password">'.'Validation ave la fonction password_verification -> '.password_verification($password_7)."<br>"."<br>"."</div>";
+for($i =0;$i < $passwords_to_test; $i++){
+	echo 'Chaîne du mot de passe contrôlée : '.$passwords_to_test[$i] .' -> valide </p>';
+	echo '<div class = "password">'.'Validation ave la fonction password_verification -> '.password_verification($passwords_to_test[$i])."<br>"."<br>"."</div>";
+}
 echo "</p>";
 ?>
