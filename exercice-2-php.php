@@ -121,7 +121,7 @@ function password_verification($unverified_password){
 $passwords_to_test= [" 0&a24223A2 ","0 &a22223A2", "0(&a24223A2", "0ê&a22223A2", "0e&a22222A2", "2e&a22222A2", "0&a22223A"];
 echo '<div>'."Exercice 2 ".'</div>' ;
 echo "<p>";
-for($i =0;$i < $passwords_to_test; $i++){
+for($i =0;$i < count($passwords_to_test); $i++){
 	echo 'Chaîne du mot de passe contrôlée : '.$passwords_to_test[$i] .' -> valide </p>';
 	echo '<div class = "password">'.'Validation ave la fonction password_verification -> '.password_verification($passwords_to_test[$i])."<br>"."<br>"."</div>";
 }
